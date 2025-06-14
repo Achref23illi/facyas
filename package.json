@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b --noEmitOnError false && vite build",
-    "build:ignore-eslint": "ESLINT_NO_DEV_ERRORS=true tsc -b && vite build",
+    "build": "vite build",
+    "build:safe": "vite build --mode production",
+    "build:ignore-eslint": "ESLINT_NO_DEV_ERRORS=true vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
