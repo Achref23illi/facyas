@@ -2,10 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ArrowDown } from 'lucide-react';
 import Button from './Button';
 
+interface Slide {
+  id: number;
+  image: string;
+  mobileImage?: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  ctaText: string;
+  contentPosition: 'left' | 'right';
+}
+
 const HeroCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides = [
+  const slides: Slide[] = [
     {
       id: 1,
       image: '/carousel1.png',
@@ -18,6 +29,7 @@ const HeroCarousel: React.FC = () => {
     {
       id: 2,
       image: '/carousel2.png',
+      mobileImage: '/blog2.png',
       title: 'Une peau parfaite',
       subtitle: 'Expertise dermatologique',
       description: 'Faites confiance à nos experts pour des soins personnalisés adaptés à votre type de peau.',
@@ -59,10 +71,18 @@ const HeroCarousel: React.FC = () => {
             }`}
           >
             {/* Background Image */}
-            <div 
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: `url(${slide.image})` }}
-            />
+            <div className="absolute inset-0 bg-cover bg-center bg-no-repeat">
+              {/* Desktop Image */}
+              <div 
+                className="hidden md:block absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${slide.image})` }}
+              />
+              {/* Mobile Image */}
+              <div 
+                className="block md:hidden absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${slide.mobileImage || slide.image})` }}
+              />
+            </div>
             
             {/* Gradient Overlay */}
             <div className={`absolute inset-0 ${

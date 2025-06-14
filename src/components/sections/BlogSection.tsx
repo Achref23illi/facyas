@@ -69,7 +69,7 @@ const BlogSection: React.FC = () => {
       id: '2',
       title: 'Vitamine C pour peau sensible : astuces pour un éclat tout en douceur',
       excerpt: 'Apprenez comment intégrer la vitamine C dans votre routine sans irriter votre peau sensible.',
-      image: '/carousel2.png', // Using existing image
+      image: '/blog2.png', // Using existing image
       category: 'Ingrédients',
       readTime: '7 min',
       date: '12 Nov 2024'

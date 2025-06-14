@@ -383,7 +383,7 @@ const BlogPost: React.FC = () => {
             {[
               {
                 title: 'Vitamine C pour peau sensible : Guide complet',
-                image: '/carousel2.png',
+                image: '/blog2.png',
                 category: 'Ingrédients',
                 readTime: '7 min'
               },
