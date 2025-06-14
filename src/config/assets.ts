@@ -73,6 +73,16 @@ export const ASSETS = {
     exfoliating_gloves: '/exfoliating_gloves.png',
     black_glove: '/black_glove.jpg',
     rose_glove: '/rose_glove.jpg',
+    // Curcuma products
+    curcuma_facial_cleanser: '/curcuma_facial_cleanser200ml.png',
+    curcuma_toner: '/curcuma_toner200ml_facial.png',
+    curcuma_serum_facial: '/curcuma_serum_facial_oil.png',
+    curcuma_facial_oil: '/curcuma_facial_oil.png',
+    curcuma_visage_cream: '/curcuma_visage_cream.png',
+    curcuma_boue_faciale: '/curcuma_boue_faciale.png',
+    curcuma_gommage_corps: '/curcuma_gommage_pour_le_cors.png',
+    curcuma_beurre_corps: '/curcuma_beurre_corps.png',
+    curcuma_soap: '/curcuma_soap.png',
   },
   
   // Placeholder images for fallback

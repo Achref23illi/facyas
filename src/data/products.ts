@@ -1,4 +1,5 @@
 import { ASSETS } from '../config/assets';
+import { Product } from '../types';
 
 export const allProducts: Product[] = [
   {
@@ -162,17 +163,120 @@ export const allProducts: Product[] = [
     skinType: ['all'],
     isOnSale: true,
     description: 'Gamme complète de soins Perfectly - Économisez 50$ CAD'
+  },
+  // Curcuma Products
+  {
+    id: '15',
+    name: 'CURCUMA FACIAL CLEANSER 200ML',
+    price: 28.80,
+    rating: 4.6,
+    reviewCount: 142,
+    image: ASSETS.products.curcuma_facial_cleanser,
+    category: 'cleanser',
+    skinType: ['all'],
+    description: 'Nettoyant facial au curcuma pour une peau éclatante'
+  },
+  {
+    id: '16',
+    name: 'CURCUMA TONER 200ML FACIAL',
+    price: 25.99,
+    rating: 4.5,
+    reviewCount: 98,
+    image: ASSETS.products.curcuma_toner,
+    category: 'toner',
+    skinType: ['all'],
+    description: 'Tonique facial au curcuma pour équilibrer la peau'
+  },
+  {
+    id: '17',
+    name: 'SÉRUM FACIAL CURCUMA 60ML',
+    price: 30.00,
+    rating: 4.7,
+    reviewCount: 156,
+    image: ASSETS.products.curcuma_serum_facial,
+    category: 'serum',
+    skinType: ['all'],
+    description: 'Sérum facial au curcuma anti-inflammatoire'
+  },
+  {
+    id: '18',
+    name: 'CURCUMA FACIAL OIL 60ML',
+    price: 22.00,
+    rating: 4.4,
+    reviewCount: 87,
+    image: ASSETS.products.curcuma_facial_oil,
+    category: 'oil',
+    skinType: ['dry', 'normal'],
+    description: 'Huile faciale au curcuma nourrissante'
+  },
+  {
+    id: '19',
+    name: 'CURCUMA VISAGE CREAM 100G',
+    price: 35.00,
+    rating: 4.8,
+    reviewCount: 203,
+    image: ASSETS.products.curcuma_visage_cream,
+    category: 'moisturizer',
+    skinType: ['all'],
+    description: 'Crème visage au curcuma hydratante et apaisante'
+  },
+  {
+    id: '20',
+    name: 'CURCUMA BOUE FACIALE MASK 150G',
+    price: 33.00,
+    rating: 4.6,
+    reviewCount: 124,
+    image: ASSETS.products.curcuma_boue_faciale,
+    category: 'mask',
+    skinType: ['oily', 'combination'],
+    description: 'Masque de boue faciale au curcuma purifiant'
+  },
+  {
+    id: '21',
+    name: 'CURCUMA GOMMAGE POUR LE CORPS 500G',
+    price: 42.00,
+    rating: 4.5,
+    reviewCount: 167,
+    image: ASSETS.products.curcuma_gommage_corps,
+    category: 'body',
+    skinType: ['all'],
+    description: 'Gommage corporel au curcuma exfoliant'
+  },
+  {
+    id: '22',
+    name: 'CURCUMA CORPS BUTTER 350G',
+    price: 38.00,
+    rating: 4.7,
+    reviewCount: 189,
+    image: ASSETS.products.curcuma_beurre_corps,
+    category: 'body',
+    skinType: ['dry', 'normal'],
+    description: 'Beurre corporel au curcuma ultra-hydratant'
+  },
+  {
+    id: '23',
+    name: 'CURCUMA SOAP 100G',
+    price: 25.00,
+    rating: 4.4,
+    reviewCount: 234,
+    image: ASSETS.products.curcuma_soap,
+    category: 'cleanser',
+    skinType: ['all'],
+    description: 'Savon au curcuma naturel et purifiant'
   }
 ];
 
 export const categories = [
   { value: 'all', label: 'Tous les produits' },
   { value: 'cleanser', label: 'Nettoyants' },
+  { value: 'toner', label: 'Toniques' },
   { value: 'serum', label: 'Sérums' },
   { value: 'moisturizer', label: 'Hydratants' },
   { value: 'oil', label: 'Huiles' },
+  { value: 'mask', label: 'Masques' },
   { value: 'sunscreen', label: 'Protection solaire' },
   { value: 'body', label: 'Corps' },
+  { value: 'tools', label: 'Accessoires' },
   { value: 'supplement', label: 'Compléments' },
   { value: 'bundle', label: 'Ensembles' }
 ]; 
