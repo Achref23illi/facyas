@@ -1,7 +1,7 @@
 import { ASSETS } from '../config/assets';
-import { Product } from '../types';
+// import { Product } from '../types';
 
-export const allProducts: Product[] = [
+export const allProducts = [
   {
     id: '13',
     name: 'EXFOLIATING GLOVES',
