@@ -13,6 +13,7 @@ export interface Product {
   skinType: string[];
   isOnSale?: boolean;
   description?: string;
+  purchaseLink?: string;
 }
 
 // Re-export for convenience

@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { Star, Heart, Share2, Truck, Shield, RotateCcw, Award } from 'lucide-react';
 import { ASSETS } from '../config/assets';
-import AddToCartButton from '../components/ui/AddToCartButton';
 import { allProducts } from '../data/products';
 
 const ProductDetail: React.FC = () => {
   const navigate = useNavigate();
-  const product = allProducts.find(p => p.id === '13');
+  const { id } = useParams();
+  const product = allProducts.find(p => p.id === id);
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [activeTab, setActiveTab] = useState('description');
@@ -20,11 +20,14 @@ const ProductDetail: React.FC = () => {
 
   if (!product) return null;
 
-  const images = [
-    { src: ASSETS.products.exfoliating_gloves, alt: product.name },
-    { src: ASSETS.products.black_glove, alt: 'Black Glove' },
-    { src: ASSETS.products.rose_glove, alt: 'Rose Glove' }
-  ];
+  let images = [{ src: product.image, alt: product.name }];
+  if (product.id === '13') {
+    images = [
+      { src: ASSETS.products.exfoliating_gloves, alt: product.name },
+      { src: ASSETS.products.black_glove, alt: 'Black Glove' },
+      { src: ASSETS.products.rose_glove, alt: 'Rose Glove' }
+    ];
+  }
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -241,16 +244,22 @@ const ProductDetail: React.FC = () => {
                 </div>
               </div>
 
-              <AddToCartButton 
-                product={product} 
-                variant="primary" 
-                size="lg" 
-                className="w-full mb-4"
-              />
-              
-              <button className="w-full bg-neutral-900 text-white py-3 rounded-lg font-medium hover:bg-neutral-800 transition-colors">
-                Acheter maintenant
-              </button>
+              {product.purchaseLink ? (
+                <a
+                  href={product.purchaseLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-center w-full bg-neutral-900 text-white py-3 rounded-lg font-medium hover:bg-neutral-800 transition-colors"
+                >
+                  Acheter maintenant
+                </a>
+              ) : (
+                <button
+                  className="w-full bg-neutral-900 text-white py-3 rounded-lg font-medium hover:bg-neutral-800 transition-colors"
+                >
+                  Acheter maintenant
+                </button>
+              )}
             </div>
 
             {/* Features */}

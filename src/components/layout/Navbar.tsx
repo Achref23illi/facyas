@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { ASSETS } from '../../config/assets';
 import { allProducts } from '../../data/products';
 import { searchProducts, getSearchSuggestions } from '../../utils/searchUtils';
-import { useCart } from '../../contexts/CartContext';
 import { Star } from 'lucide-react';
 
 const Navbar: React.FC = () => {
@@ -11,7 +10,6 @@ const Navbar: React.FC = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
-  const { state: cartState, toggleCart } = useCart();
 
   // Search results based on current query
   const searchResults = useMemo(() => {
@@ -331,22 +329,6 @@ const Navbar: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </button>
-
-                {/* Shopping Cart */}
-                <button 
-                  onClick={toggleCart}
-                  className="text-neutral-700 hover:text-primary-600 transition-colors relative"
-                  aria-label="Shopping cart"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m0 0L17 13" />
-                  </svg>
-                  {cartState.itemCount > 0 && (
-                    <span className="absolute -top-2 -right-2 bg-primary-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                      {cartState.itemCount}
-                    </span>
-                  )}
-                </button>
               </div>
             </div>
           </div>
@@ -385,22 +367,6 @@ const Navbar: React.FC = () => {
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
-              </button>
-
-              {/* Shopping Cart */}
-              <button 
-                onClick={toggleCart}
-                className="text-neutral-700 hover:text-primary-600 transition-colors relative"
-                aria-label="Shopping cart"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m0 0L17 13" />
-                </svg>
-                {cartState.itemCount > 0 && (
-                  <span className="absolute -top-2 -right-2 bg-primary-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                    {cartState.itemCount}
-                  </span>
-                )}
               </button>
 
               {/* Mobile Menu Button */}

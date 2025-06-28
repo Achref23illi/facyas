@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { Star } from 'lucide-react';
 import Button from '../common/Button';
-import AddToCartButton from '../ui/AddToCartButton';
 import { allProducts } from '../../data/products';
 
 const ProductShowcase: React.FC = () => {
@@ -145,16 +144,6 @@ const ProductShowcase: React.FC = () => {
                 
                 {/* Overlay */}
                 <div className="product-overlay absolute inset-0 bg-black/40"></div>
-                
-                {/* Add to Cart Button */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <AddToCartButton
-                    product={product}
-                    variant="primary"
-                    size="md"
-                    className="add-to-cart-btn font-semibold shadow-lg transition-all duration-300 transform hover:scale-105"
-                  />
-                </div>
               </div>
 
               {/* Product Info */}

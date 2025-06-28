@@ -11,7 +11,8 @@ export const allProducts = [
     image: ASSETS.products.exfoliating_gloves,
     category: 'tools',
     skinType: ['all'],
-    description: 'Gants exfoliants pour un gommage doux et efficace de la peau'
+    description: 'Gants exfoliants pour un gommage doux et efficace de la peau',
+    purchaseLink: 'https://buy.stripe.com/00w00j8c78JxgPt6Ws57W00'
   },
   {
     id: '1',
@@ -23,7 +24,8 @@ export const allProducts = [
     badge: 'BEST SELLER',
     category: 'moisturizer',
     skinType: ['dry', 'normal'],
-    description: 'Crème hydratante anti-âge pour le visage'
+    description: 'Crème hydratante anti-âge pour le visage',
+    purchaseLink: 'https://buy.stripe.com/4gMcN5fEzcZN8iX6Ws57W01'
   },
   {
     id: '2',
@@ -34,7 +36,8 @@ export const allProducts = [
     image: ASSETS.products.glutathione_face_serum,
     category: 'serum',
     skinType: ['all'],
-    description: 'Sérum éclat au glutathione pour tous types de peau'
+    description: 'Sérum éclat au glutathione pour tous types de peau',
+    purchaseLink: 'https://buy.stripe.com/fZuaEX1NJf7V42H4Ok57W02'
   },
   {
     id: '3',
@@ -46,7 +49,8 @@ export const allProducts = [
     badge: 'PROTECTION',
     category: 'sunscreen',
     skinType: ['all'],
-    description: 'Protection solaire haute performance SPF 50+'
+    description: 'Protection solaire haute performance SPF 50+',
+    purchaseLink: 'https://buy.stripe.com/aFa3cvcsn0d10Qv1C857W03'
   },
   {
     id: '4',
@@ -57,7 +61,8 @@ export const allProducts = [
     image: ASSETS.products.rose_multi_use_oil,
     category: 'oil',
     skinType: ['dry', 'mature'],
-    description: 'Huile multi-usage à la rose pour peau sèche et mature'
+    description: 'Huile multi-usage à la rose pour peau sèche et mature',
+    purchaseLink: 'https://buy.stripe.com/3cI9AT7833pddDhdkQ57W04'
   },
   {
     id: '5',
@@ -68,7 +73,8 @@ export const allProducts = [
     image: ASSETS.products.perfectly_soap,
     category: 'cleanser',
     skinType: ['oily', 'combination'],
-    description: 'Savon nettoyant pour peaux grasses et mixtes'
+    description: 'Savon nettoyant pour peaux grasses et mixtes',
+    purchaseLink: 'https://buy.stripe.com/8x2bJ1boj6Bp2YDbcI57W05'
   },
   {
     id: '6',
@@ -79,7 +85,8 @@ export const allProducts = [
     image: ASSETS.products.glutathione_soap,
     category: 'cleanser',
     skinType: ['all'],
-    description: 'Savon au glutathione pour un teint éclatant'
+    description: 'Savon au glutathione pour un teint éclatant',
+    purchaseLink: 'https://buy.stripe.com/eVqaEX3VR2l9dDhdkQ57W06'
   },
   {
     id: '7',
@@ -90,7 +97,8 @@ export const allProducts = [
     image: ASSETS.products.perfectly_body_lotion,
     category: 'body',
     skinType: ['dry', 'normal'],
-    description: 'Lotion corporelle hydratante pour peau douce'
+    description: 'Lotion corporelle hydratante pour peau douce',
+    purchaseLink: 'https://buy.stripe.com/00w14ncsn5xl2YD1C857W07'
   },
   {
     id: '8',
@@ -104,7 +112,8 @@ export const allProducts = [
     category: 'supplement',
     skinType: ['mature'],
     isOnSale: true,
-    description: 'Complément anti-âge au glutathione et collagène'
+    description: 'Complément anti-âge au glutathione et collagène',
+    purchaseLink: 'https://buy.stripe.com/eVq5kD1NJbVJfLp0y457W08'
   },
   {
     id: '9',
@@ -115,7 +124,8 @@ export const allProducts = [
     image: ASSETS.products.retinol_glutathione_cream,
     category: 'moisturizer',
     skinType: ['mature', 'combination'],
-    description: 'Crème anti-âge au rétinol et glutathione'
+    description: 'Crème anti-âge au rétinol et glutathione',
+    purchaseLink: 'https://buy.stripe.com/28E4gz3VR2l9ar5bcI57W09'
   },
   {
     id: '10',
@@ -126,7 +136,8 @@ export const allProducts = [
     image: ASSETS.products.perfectly_oil,
     category: 'oil',
     skinType: ['dry', 'normal'],
-    description: 'Huile nourrissante pour visage et corps'
+    description: 'Huile nourrissante pour visage et corps',
+    purchaseLink: 'https://buy.stripe.com/28E5kDcsn1h52YDfsY57W0a'
   },
   {
     id: '11',
@@ -148,7 +159,8 @@ export const allProducts = [
     image: ASSETS.products.glutathione_vitamin_c_lotion,
     category: 'moisturizer',
     skinType: ['normal', 'combination'],
-    description: 'Lotion éclat au glutathione et vitamine C'
+    description: 'Lotion éclat au glutathione et vitamine C',
+    purchaseLink: 'https://buy.stripe.com/00weVd4ZVbVJ9n1cgM57W0b'
   },
   {
     id: '14',
@@ -174,7 +186,8 @@ export const allProducts = [
     image: ASSETS.products.curcuma_facial_cleanser,
     category: 'cleanser',
     skinType: ['all'],
-    description: 'Nettoyant facial au curcuma pour une peau éclatante'
+    description: 'Nettoyant facial au curcuma pour une peau éclatante',
+    purchaseLink: 'https://buy.stripe.com/dRm8wP0JF6Bpar55So57W0c'
   },
   {
     id: '16',

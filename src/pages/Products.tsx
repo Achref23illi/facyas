@@ -3,7 +3,6 @@ import { useSearchParams, Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { Star, Filter, Grid, List, ChevronDown, Search } from 'lucide-react';
 import Button from '../components/common/Button';
-import AddToCartButton from '../components/ui/AddToCartButton';
 import { allProducts } from '../data/products';
 import { SITE_CONFIG } from '../utils/constants';
 
@@ -126,29 +125,13 @@ const Products: React.FC = () => {
 
     const image = product.querySelector('.product-image');
     const overlay = product.querySelector('.product-overlay');
-    const button = product.querySelector('.add-to-cart-btn');
 
     if (isEntering) {
       gsap.to(image, { scale: 1.05, duration: 0.4, ease: "power2.out" });
       gsap.to(overlay, { opacity: 1, duration: 0.3, ease: "power2.out" });
-      gsap.to(button, { 
-        opacity: 1, 
-        y: 0, 
-        visibility: 'visible',
-        duration: 0.4, 
-        ease: "back.out(1.7)",
-        delay: 0.1 
-      });
     } else {
       gsap.to(image, { scale: 1, duration: 0.4, ease: "power2.out" });
       gsap.to(overlay, { opacity: 0, duration: 0.3, ease: "power2.out" });
-      gsap.to(button, { 
-        opacity: 0, 
-        y: 20, 
-        visibility: 'hidden',
-        duration: 0.3, 
-        ease: "power2.out" 
-      });
     }
   };
 
@@ -308,8 +291,9 @@ const Products: React.FC = () => {
                 : 'grid-cols-1'
             }`}>
               {filteredProducts.map((product, index) => (
-                <div
+                <Link
                   key={product.id}
+                  to={`/products/${product.id}`}
                   ref={(el) => {
                     if (el) productsRef.current[index] = el;
                   }}
@@ -318,6 +302,7 @@ const Products: React.FC = () => {
                   }`}
                   onMouseEnter={() => handleProductHover(index, true)}
                   onMouseLeave={() => handleProductHover(index, false)}
+                  style={{ textDecoration: 'none', color: 'inherit' }}
                 >
                   {/* Product Badge */}
                   {product.badge && (
@@ -338,22 +323,6 @@ const Products: React.FC = () => {
                     
                     {/* Overlay */}
                     <div className="product-overlay absolute inset-0 bg-black/40 opacity-0"></div>
-                    
-                    {/* Add to Cart Button */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div 
-                        className="add-to-cart-btn opacity-0 invisible"
-                        style={{ transform: 'translateY(20px)' }}
-                      >
-                        <AddToCartButton 
-                          product={product}
-                          variant="primary"
-                          size="sm"
-                          className="shadow-lg"
-                          fullWidth={false}
-                        />
-                      </div>
-                    </div>
                   </div>
 
                   {/* Product Info */}
@@ -389,21 +358,8 @@ const Products: React.FC = () => {
                         </span>
                       )}
                     </div>
-
-                    {viewMode === 'list' && (
-                      <AddToCartButton 
-                        product={product}
-                        variant="outline"
-                        size="sm"
-                        fullWidth={false}
-                      />
-                    )}
                   </div>
-
-                  {product.id === '13' ? (
-                    <Link to="/product/exfoliating-gloves" className="absolute inset-0 z-20" />
-                  ) : null}
-                </div>
+                </Link>
               ))}
             </div>
 
