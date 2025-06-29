@@ -198,7 +198,8 @@ export const allProducts = [
     image: ASSETS.products.curcuma_toner,
     category: 'toner',
     skinType: ['all'],
-    description: 'Tonique facial au curcuma pour équilibrer la peau'
+    description: 'Tonique facial au curcuma pour équilibrer la peau',
+    purchaseLink: 'https://buy.stripe.com/8x214n2RNf7Vczd2Gc57W0e'
   },
   {
     id: '17',
@@ -209,7 +210,8 @@ export const allProducts = [
     image: ASSETS.products.curcuma_serum_facial,
     category: 'serum',
     skinType: ['all'],
-    description: 'Sérum facial au curcuma anti-inflammatoire'
+    description: 'Sérum facial au curcuma anti-inflammatoire',
+    purchaseLink: 'https://buy.stripe.com/9B64gz4ZV8Jxar5bcI57W0f'
   },
   {
     id: '18',
@@ -220,7 +222,8 @@ export const allProducts = [
     image: ASSETS.products.curcuma_facial_oil,
     category: 'oil',
     skinType: ['dry', 'normal'],
-    description: 'Huile faciale au curcuma nourrissante'
+    description: 'Huile faciale au curcuma nourrissante',
+    purchaseLink: 'https://buy.stripe.com/eVqeVd3VR8Jx2YD4Ok57W0g'
   },
   {
     id: '19',
@@ -231,7 +234,8 @@ export const allProducts = [
     image: ASSETS.products.curcuma_visage_cream,
     category: 'moisturizer',
     skinType: ['all'],
-    description: 'Crème visage au curcuma hydratante et apaisante'
+    description: 'Crème visage au curcuma hydratante et apaisante',
+    purchaseLink: 'https://buy.stripe.com/cNi8wPboj8JxgPteoU57W0h'
   },
   {
     id: '20',
@@ -242,7 +246,8 @@ export const allProducts = [
     image: ASSETS.products.curcuma_boue_faciale,
     category: 'mask',
     skinType: ['oily', 'combination'],
-    description: 'Masque de boue faciale au curcuma purifiant'
+    description: 'Masque de boue faciale au curcuma purifiant',
+    purchaseLink: 'https://buy.stripe.com/28EdR9akfbVJar580w57W0i'
   },
   {
     id: '21',
@@ -253,7 +258,8 @@ export const allProducts = [
     image: ASSETS.products.curcuma_gommage_corps,
     category: 'body',
     skinType: ['all'],
-    description: 'Gommage corporel au curcuma exfoliant'
+    description: 'Gommage corporel au curcuma exfoliant',
+    purchaseLink: 'https://buy.stripe.com/aFa4gz63Z7Ft9n14Ok57W0j'
   },
   {
     id: '22',
@@ -264,7 +270,8 @@ export const allProducts = [
     image: ASSETS.products.curcuma_beurre_corps,
     category: 'body',
     skinType: ['dry', 'normal'],
-    description: 'Beurre corporel au curcuma ultra-hydratant'
+    description: 'Beurre corporel au curcuma ultra-hydratant',
+    purchaseLink: 'https://buy.stripe.com/7sYdR9bojgbZar56Ws57W0k'
   },
   {
     id: '23',
@@ -275,7 +282,8 @@ export const allProducts = [
     image: ASSETS.products.curcuma_soap,
     category: 'cleanser',
     skinType: ['all'],
-    description: 'Savon au curcuma naturel et purifiant'
+    description: 'Savon au curcuma naturel et purifiant',
+    purchaseLink: 'https://buy.stripe.com/fZu3cvakf0d156LcgM57W0l'
   }
 ];
 
